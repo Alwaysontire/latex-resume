@@ -3,4 +3,5 @@ FROM texlive/texlive:latest
 WORKDIR /cv
 COPY CV/ .
 
-CMD ["xelatex", "-interaction=nonstopmode", "resume.tex"]
+RUN xelatex -interaction=nonstopmode resume.tex && \
+    xelatex -interaction=nonstopmode resume.tex

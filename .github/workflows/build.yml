@@ -1,18 +1,18 @@
-name: Build Resume PDF
+name: Build Resume
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    paths:
+      - 'CV/**'
+      - 'Dockerfile'
+      - '.github/workflows/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
     - name: Set up Docker
       uses: docker/setup-buildx-action@v2
@@ -22,11 +22,15 @@ jobs:
 
     - name: Run Docker container to compile resume
       run: |
-        docker run --rm -v ${{ github.workspace }}:/output resume-builder
+        docker run --rm \
+          -v ${{ github.workspace }}/output:/cv/output \
+          resume-builder \
+          sh -c "cp /cv/main.pdf /cv/output/resume.pdf"
 
     - name: Upload PDF
       uses: actions/upload-artifact@v4
       with:
-          name: resume-pdf
-          path: ${{ github.workspace }}/resume.pdf
+        name: resume-pdf
+        path: output/resume.pdf
+
 
