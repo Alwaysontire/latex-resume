@@ -1,0 +1,31 @@
+name: Build Resume PDF
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Docker
+      uses: docker/setup-buildx-action@v2
+
+    - name: Build Docker image
+      run: docker build -t resume-builder .
+
+    - name: Run Docker container to compile resume
+      run: |
+        docker run --rm -v ${{ github.workspace }}:/output resume-builder
+
+    - name: Upload PDF
+      uses: actions/upload-artifact@v4 
+      with:
+          name: resume-pdf
+          path: ${{ github.workspace }}/resume.pdf

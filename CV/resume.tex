@@ -1,0 +1,107 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage[scaled]{helvet}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{DejaVu Sans}
+\setsansfont{DejaVu Sans}
+\usepackage[russian,english]{babel}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\geometry{
+  left=15pt, right=15pt,
+  top=15pt, bottom=15pt
+}
+
+\begin{document}
+
+\noindent
+\begin{minipage}[t]{0.40\textwidth}
+    \small
+    \includegraphics[width=2.5cm]{photo.jpg}\\[1em]
+
+    {\large\bfseries Персональная информация}\\[-0.2em]
+    \rule{\linewidth}{0.4pt}\\[0.4em]
+    \begin{tabular}{@{}rl}
+        \faPhone\ & +7 963 752 92 18 \\
+        \faEnvelope\ & \href{mailto:inizhankovskii@gmail.com}{inizhankovskii@gmail.com} \\
+        \faMapMarker\ & Москва \\
+    \end{tabular}
+
+    \vspace{1em}
+    {\large\bfseries Links}\\[-0.2em]
+    \rule{\linewidth}{0.4pt}\\[0.4em]
+    \begin{tabular}{@{}rl}
+        \faTelegram\ & \href{https://t.me/alwaysontire}{@alwaysontire} \\
+    \end{tabular}
+
+    \vspace{1em}
+    {\large\bfseries Навыки программирования}\\[-0.2em]
+    \rule{\linewidth}{0.4pt}\\[0.4em]
+    \begin{tabular}{@{}rl}
+        \faCircleNotch\ & Python \\
+        \faCircleNotch\ & C++ \\
+        \faCircleNotch\ & Go \\
+        \faCircleNotch\ & ML \\
+        \faCircleNotch\ & Bash \\
+    \end{tabular}
+
+    \vspace{1em}
+    {\large\bfseries Разговорные языки}\\[-0.2em]
+    \rule{\linewidth}{0.4pt}\\[0.4em]
+    \begin{tabular}{@{}rl}
+        \faLanguage\ & Russian \\
+        \faLanguage\ & English \\
+    \end{tabular}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.58\textwidth}
+    {\huge\bfseries Нижанковский Илья}\\[0.3em]
+    {\large Data Scientist}
+
+    \vspace{1em}
+    Я математик и программист с прочной основой в алгоритмах, логике и решении задач. 
+    Обладаю глубокими знаниями в области математики и компьютерных наук, развивал 
+    аналитическое мышление и навыки программирования через практические проекты: 
+    создание ML-модели на основе кластеризации, web-приложения на Streamlit для 
+    прогноза погоды. Особое внимание уделяю глубинному обучению и хотел бы 
+    связать с ним свою карьеру. Имею опыт IT-ассистента, что помогает понимать 
+    корпоративную культуру и реалии работы в компании.
+
+    \vspace{1.2em}
+    {\large\bfseries Опыт работы}\\[-0.2em]
+    \rule{\linewidth}{0.4pt}\\[0.4em]
+    {\bfseries Стажировка} \hfill Июль 2023 – Апрель 2024\\
+    \begin{itemize}[leftmargin=*]\itemsep0pt
+        \item Помогал в IT-отделе «Горизонт Покрытий»: писал инструкции, создал Telegram-бота и интегрировал его с Zabbix для мониторинга.
+    \end{itemize}
+
+    \vspace{0.8em}
+    {\large\bfseries Образование}\\[-0.2em]
+    \rule{\linewidth}{0.4pt}\\[0.6em]
+
+    {\bfseries Высшая Школа Экономики (бакалавриат)} \hfill Сентябрь 2024 – Июнь 2025\\
+    Направление: Прикладная математика и информатика\\
+    Программа: Компьютерные науки и анализ данных
+
+    \vspace{0.8em}
+    {\bfseries Павловская гимназия (среднее образование)} \hfill Сентябрь 2011 – Июнь 2022\\
+    Профиль: Математика, информатика, физика
+
+    \vspace{1em}
+    {\large\bfseries Увлечения}\\[-0.2em]
+    \rule{\linewidth}{0.4pt}\\[0.4em]
+    \begin{itemize}[leftmargin=*]\itemsep0pt
+        \item Триатлон: регулярно тренируюсь, участвовал в соревнованиях
+        \item Машинное обучение: реализую личные исследования и pet-проекты
+    \end{itemize}
+\end{minipage}
+
+\end{document}
