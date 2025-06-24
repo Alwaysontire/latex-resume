@@ -25,7 +25,7 @@ jobs:
         docker run --rm \
           -v ${{ github.workspace }}/output:/cv/output \
           resume-builder \
-          sh -c "cp /cv/main.pdf /cv/output/resume.pdf"
+          sh -c "cp /cv/resume.pdf /cv/output/resume.pdf"
 
     - name: Upload PDF
       uses: actions/upload-artifact@v4
